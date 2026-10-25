@@ -1,0 +1,80 @@
+site_name: 游戏版本库
+site_description: Minecraft（Java/基岩）与星露谷物语全版本下载索引：按平台、大版本与版本号汇集多个公开下载源。
+site_author: 游戏版本库
+copyright: 本站只索引公开下载源，不托管游戏文件。Minecraft 为 Mojang/Microsoft 商标，星露谷物语为 ConcernedApe 作品。
+
+theme:
+  name: material
+  language: zh
+  logo: img/favicon.svg
+  favicon: img/favicon.svg
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+extra_css:
+  - stylesheets/index.v7.css
+
+nav:
+  - 首页: index.md
+  - Minecraft:
+      - 专题: minecraft/index.md
+      - Java 版: minecraft/java.md
+      - 基岩版 · Android: minecraft/android.md
+      - 基岩版 · iOS: minecraft/ios.md
+      - 基岩版 · Windows: minecraft/windows.md
+      - 模组加载器:
+          - 总览: resources/index.md
+          - Fabric: resources/fabric/index.md
+          - Quilt: resources/quilt/index.md
+          - Forge: resources/forge/index.md
+          - NeoForge: resources/neoforge/index.md
+          - OptiFine: resources/optifine.md
+          - LiteLoader: resources/liteloader.md
+  - 星露谷物语:
+      - 专题: stardew/index.md
+      - Android: stardew/android.md
+  - 来源: sources.md
+  - 关于: about.md
+
+not_in_nav: |
+  /download/**
+  /resources/forge/*.md
+  /resources/neoforge/*.md

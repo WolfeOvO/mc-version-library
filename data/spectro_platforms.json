@@ -1,0 +1,35 @@
+{
+ "generated": "2026-10-25T00:29:50Z",
+ "source": "https://www.spectrollay.com/data/minecraft_repository/bedrock_versions.json",
+ "platforms": {
+  "android": {
+   "branches": 139,
+   "branches_with_links": 139,
+   "links": 1192,
+   "blank_links": 628
+  },
+  "ios": {
+   "branches": 37,
+   "branches_with_links": 37,
+   "links": 148,
+   "blank_links": 0
+  },
+  "windows": {
+   "branches": 26,
+   "branches_with_links": 0,
+   "links": 0,
+   "blank_links": 104
+  }
+ },
+ "editions": {
+  "bedrock": true,
+  "java": false,
+  "education": false,
+  "trial": false,
+  "server": false,
+  "story_mode": false,
+  "earth": false,
+  "dungeons": false,
+  "legends": false
+ }
+}

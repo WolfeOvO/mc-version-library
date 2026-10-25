@@ -1,0 +1,21 @@
+# data/ 与 docs/ 的页面由脚本生成
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 运行时产物
+cache/
+logs/
+site/
+
+# 生成的页面（保留主题资源）
+docs/index.md
+docs/about.md
+docs/sources.md
+docs/minecraft/
+docs/download/
+docs/resources/
+docs/stardew/
+
+.DS_Store

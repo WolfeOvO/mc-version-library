@@ -1,0 +1,1923 @@
+{
+ "generated": "2026-10-25T00:32:15.232046+00:00",
+ "duration_s": 911.9,
+ "devices": {
+  "java": {
+   "name": "Minecraft Java 版",
+   "count": 920,
+   "directory_count": 0,
+   "latest_release": "26.3",
+   "latest_any": "26.4-snapshot-5",
+   "majors": [
+    {
+     "major": "26.x",
+     "count": 61,
+     "latest": "26.4-snapshot-5",
+     "latest_release": "26.3",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.21",
+     "count": 58,
+     "latest": "1.21.11",
+     "latest_release": "1.21.11",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.20",
+     "count": 36,
+     "latest": "1.20.6",
+     "latest_release": "1.20.6",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.19",
+     "count": 36,
+     "latest": "1.19.4",
+     "latest_release": "1.19.4",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.18",
+     "count": 23,
+     "latest": "1.18.2",
+     "latest_release": "1.18.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.17",
+     "count": 14,
+     "latest": "1.17.1",
+     "latest_release": "1.17.1",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.16",
+     "count": 25,
+     "latest": "1.16.5",
+     "latest_release": "1.16.5",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.15",
+     "count": 13,
+     "latest": "1.15.2",
+     "latest_release": "1.15.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.14",
+     "count": 27,
+     "latest": "1.14.4",
+     "latest_release": "1.14.4",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.13",
+     "count": 17,
+     "latest": "1.13.2",
+     "latest_release": "1.13.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.12",
+     "count": 13,
+     "latest": "1.12.2",
+     "latest_release": "1.12.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.11",
+     "count": 4,
+     "latest": "1.11.2",
+     "latest_release": "1.11.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.10",
+     "count": 5,
+     "latest": "1.10.2",
+     "latest_release": "1.10.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.9",
+     "count": 15,
+     "latest": "1.9.4",
+     "latest_release": "1.9.4",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.8",
+     "count": 25,
+     "latest": "1.8.9",
+     "latest_release": "1.8.9",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.7",
+     "count": 17,
+     "latest": "1.7.10-pre4",
+     "latest_release": "1.7.10",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.6",
+     "count": 5,
+     "latest": "1.6.4",
+     "latest_release": "1.6.4",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.5",
+     "count": 3,
+     "latest": "1.5.2",
+     "latest_release": "1.5.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.4",
+     "count": 8,
+     "latest": "1.4.7",
+     "latest_release": "1.4.7",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.3",
+     "count": 3,
+     "latest": "1.3.2",
+     "latest_release": "1.3.2",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.2",
+     "count": 5,
+     "latest": "1.2.5",
+     "latest_release": "1.2.5",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.1",
+     "count": 1,
+     "latest": "1.1",
+     "latest_release": "1.1",
+     "sources": [
+      "bmclapi",
+      "mojang"
+     ]
+    },
+    {
+     "major": "1.0",
+     "count": 1,
+     "latest": "1.0",
+     "latest_release": "1.0",
+     "sources": [
+      "bmclapi",
+      "mojang"
+     ]
+    },
+    {
+     "major": "其他",
+     "count": 454,
+     "latest": "26w14a",
+     "latest_release": "",
+     "sources": [
+      "bmclapi",
+      "fastmirror",
+      "mojang"
+     ]
+    },
+    {
+     "major": "远古版本",
+     "count": 51,
+     "latest": "b1.8.1",
+     "latest_release": "",
+     "sources": [
+      "bmclapi",
+      "mojang"
+     ]
+    }
+   ]
+  },
+  "android": {
+   "name": "Minecraft 基岩版 · Android",
+   "count": 875,
+   "directory_count": 139,
+   "latest_release": "26.52.3",
+   "latest_any": "1.16.200.54",
+   "majors": [
+    {
+     "major": "26.x",
+     "count": 91,
+     "latest": "26.70.21",
+     "latest_release": "26.52.3",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.21",
+     "count": 148,
+     "latest": "1.21.132.1",
+     "latest_release": "1.21.132.1",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.20",
+     "count": 68,
+     "latest": "1.20.81.01",
+     "latest_release": "1.20.81.01",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.19",
+     "count": 76,
+     "latest": "1.19.83.01",
+     "latest_release": "1.19.83.01",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.18",
+     "count": 38,
+     "latest": "1.18.32.02",
+     "latest_release": "1.18.32.02",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.17",
+     "count": 34,
+     "latest": "1.17.41.01",
+     "latest_release": "1.17.41.01",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.16",
+     "count": 73,
+     "latest": "1.16.200.54",
+     "latest_release": "1.16.200.54",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.15",
+     "count": 5,
+     "latest": "1.15.0.56",
+     "latest_release": "1.15.0.56",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.14",
+     "count": 33,
+     "latest": "1.14.0.5",
+     "latest_release": "1.14.0.5",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.13",
+     "count": 15,
+     "latest": "1.13.0.3",
+     "latest_release": "1.13.0.3",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.12",
+     "count": 15,
+     "latest": "1.12.1.1",
+     "latest_release": "1.12.1.1",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.11",
+     "count": 16,
+     "latest": "1.11.4.2",
+     "latest_release": "1.11.4.2",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.10",
+     "count": 4,
+     "latest": "1.10.0.7",
+     "latest_release": "1.10.0.7",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.9",
+     "count": 6,
+     "latest": "1.9.0.15",
+     "latest_release": "1.9.0.15",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.8",
+     "count": 10,
+     "latest": "1.8.1.2",
+     "latest_release": "1.8.1.2",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.7",
+     "count": 8,
+     "latest": "1.7.0.13",
+     "latest_release": "1.7.0.13",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.6",
+     "count": 9,
+     "latest": "1.6.1.0",
+     "latest_release": "1.6.1.0",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.5",
+     "count": 12,
+     "latest": "1.5.3.0",
+     "latest_release": "1.5.3.0",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.4",
+     "count": 8,
+     "latest": "1.4.2.0",
+     "latest_release": "1.4.2.0",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.2",
+     "count": 52,
+     "latest": "1.2.20.2",
+     "latest_release": "1.2.20.2",
+     "sources": [
+      "ganquan",
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.1",
+     "count": 24,
+     "latest": "1.1.5.1",
+     "latest_release": "1.1.5.1",
+     "sources": [
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.0",
+     "count": 30,
+     "latest": "1.0.9.1",
+     "latest_release": "1.0.9.1",
+     "sources": [
+      "mcapks",
+      "mcarc",
+      "mcarc_static",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.17",
+     "count": 3,
+     "latest": "0.17.0.2",
+     "latest_release": "0.17.0.2",
+     "sources": [
+      "mcarc_static",
+      "mcpelife"
+     ]
+    },
+    {
+     "major": "0.16",
+     "count": 5,
+     "latest": "0.16.2.2",
+     "latest_release": "0.16.2.2",
+     "sources": [
+      "mcapks",
+      "mcarc",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.15",
+     "count": 30,
+     "latest": "0.15.90.7",
+     "latest_release": "0.15.90.7",
+     "sources": [
+      "mcapks",
+      "mcarc",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.14",
+     "count": 19,
+     "latest": "0.14.3",
+     "latest_release": "0.14.3",
+     "sources": [
+      "mcapks",
+      "mcarc",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.13",
+     "count": 3,
+     "latest": "0.13.2",
+     "latest_release": "0.13.2",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.12",
+     "count": 4,
+     "latest": "0.12.3",
+     "latest_release": "0.12.3",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.11",
+     "count": 2,
+     "latest": "0.11.0",
+     "latest_release": "0.11.0",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.10",
+     "count": 5,
+     "latest": "0.10.5",
+     "latest_release": "0.10.5",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.9",
+     "count": 6,
+     "latest": "0.9.5",
+     "latest_release": "0.9.5",
+     "sources": [
+      "mcapks",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.8",
+     "count": 2,
+     "latest": "0.8.1",
+     "latest_release": "0.8.1",
+     "sources": [
+      "mcapks",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.7",
+     "count": 7,
+     "latest": "0.7.6",
+     "latest_release": "0.7.6",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.6",
+     "count": 2,
+     "latest": "0.6.1",
+     "latest_release": "0.6.1",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.5",
+     "count": 1,
+     "latest": "0.5.0",
+     "latest_release": "0.5.0",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.4",
+     "count": 1,
+     "latest": "0.4.0",
+     "latest_release": "0.4.0",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.3",
+     "count": 3,
+     "latest": "0.3.3",
+     "latest_release": "0.3.3",
+     "sources": [
+      "mcapks",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.2",
+     "count": 3,
+     "latest": "0.2.2",
+     "latest_release": "0.2.2",
+     "sources": [
+      "mcapks",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.1",
+     "count": 4,
+     "latest": "0.1.3",
+     "latest_release": "0.1.3",
+     "sources": [
+      "mcapks",
+      "mcdl",
+      "mcpelife",
+      "nullatom",
+      "spectro",
+      "xiaobu"
+     ]
+    }
+   ]
+  },
+  "ios": {
+   "name": "Minecraft 基岩版 · iOS",
+   "count": 213,
+   "directory_count": 37,
+   "latest_release": "26.52",
+   "latest_any": "26.3",
+   "majors": [
+    {
+     "major": "26.x",
+     "count": 7,
+     "latest": "26.3",
+     "latest_release": "26.3",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.21",
+     "count": 22,
+     "latest": "1.21.113",
+     "latest_release": "1.21.113",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.20",
+     "count": 19,
+     "latest": "1.20.81",
+     "latest_release": "1.20.81",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.19",
+     "count": 21,
+     "latest": "1.19.83",
+     "latest_release": "1.19.83",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.18",
+     "count": 5,
+     "latest": "1.18.31",
+     "latest_release": "1.18.31",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.17",
+     "count": 4,
+     "latest": "1.17.41",
+     "latest_release": "1.17.41",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.16",
+     "count": 11,
+     "latest": "1.16.221",
+     "latest_release": "1.16.221",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.14",
+     "count": 5,
+     "latest": "1.14.60",
+     "latest_release": "1.14.60",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.13",
+     "count": 4,
+     "latest": "1.13.0",
+     "latest_release": "1.13.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.12",
+     "count": 4,
+     "latest": "1.12.1",
+     "latest_release": "1.12.1",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.11",
+     "count": 4,
+     "latest": "1.11.0",
+     "latest_release": "1.11.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.10",
+     "count": 1,
+     "latest": "1.10.0",
+     "latest_release": "1.10.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.9",
+     "count": 1,
+     "latest": "1.9.0",
+     "latest_release": "1.9.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.8",
+     "count": 3,
+     "latest": "1.8.1",
+     "latest_release": "1.8.1",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.7",
+     "count": 1,
+     "latest": "1.7.0",
+     "latest_release": "1.7.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.6",
+     "count": 3,
+     "latest": "1.6.0",
+     "latest_release": "1.6.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.5",
+     "count": 4,
+     "latest": "1.5.0",
+     "latest_release": "1.5.0",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.4",
+     "count": 4,
+     "latest": "1.4.1",
+     "latest_release": "1.4.1",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.2",
+     "count": 19,
+     "latest": "1.2.16",
+     "latest_release": "1.2.16",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.1",
+     "count": 7,
+     "latest": "1.1.7",
+     "latest_release": "1.1.7",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "1.0",
+     "count": 11,
+     "latest": "1.0.9",
+     "latest_release": "1.0.9",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.16",
+     "count": 4,
+     "latest": "0.16.2",
+     "latest_release": "0.16.2",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.15",
+     "count": 9,
+     "latest": "0.15.9",
+     "latest_release": "0.15.9",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.14",
+     "count": 4,
+     "latest": "0.14.3",
+     "latest_release": "0.14.3",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.13",
+     "count": 3,
+     "latest": "0.13.2",
+     "latest_release": "0.13.2",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.12",
+     "count": 3,
+     "latest": "0.12.3",
+     "latest_release": "0.12.3",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.11",
+     "count": 2,
+     "latest": "0.11.1",
+     "latest_release": "0.11.1",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.10",
+     "count": 2,
+     "latest": "0.10.4",
+     "latest_release": "0.10.4",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.9",
+     "count": 4,
+     "latest": "0.9.5",
+     "latest_release": "0.9.5",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.8",
+     "count": 2,
+     "latest": "0.8.1",
+     "latest_release": "0.8.1",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.7",
+     "count": 7,
+     "latest": "0.7.6",
+     "latest_release": "0.7.6",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.6",
+     "count": 2,
+     "latest": "0.6.1",
+     "latest_release": "0.6.1",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.5",
+     "count": 1,
+     "latest": "0.5.0",
+     "latest_release": "0.5.0",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.4",
+     "count": 3,
+     "latest": "0.4.2",
+     "latest_release": "0.4.2",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.3",
+     "count": 3,
+     "latest": "0.3.3",
+     "latest_release": "0.3.3",
+     "sources": [
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.2",
+     "count": 2,
+     "latest": "0.2.1",
+     "latest_release": "0.2.1",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    },
+    {
+     "major": "0.1",
+     "count": 2,
+     "latest": "0.1.3",
+     "latest_release": "0.1.3",
+     "sources": [
+      "mcdl",
+      "nullatom",
+      "spectro"
+     ]
+    }
+   ]
+  },
+  "windows": {
+   "name": "Minecraft 基岩版 · Windows",
+   "count": 952,
+   "directory_count": 26,
+   "latest_release": "26.52.3",
+   "latest_any": "26.70.21",
+   "majors": [
+    {
+     "major": "26.x",
+     "count": 91,
+     "latest": "26.70.21",
+     "latest_release": "26.52.3",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.21",
+     "count": 179,
+     "latest": "1.21.132.1",
+     "latest_release": "1.21.132.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.20",
+     "count": 109,
+     "latest": "1.20.81.01",
+     "latest_release": "1.20.81.01",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.19",
+     "count": 123,
+     "latest": "1.19.83.1",
+     "latest_release": "1.19.83.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.18",
+     "count": 51,
+     "latest": "1.18.31.4",
+     "latest_release": "1.18.31.4",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.17",
+     "count": 46,
+     "latest": "1.17.10.21",
+     "latest_release": "1.17.10.21",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.16",
+     "count": 100,
+     "latest": "1.16.221.1",
+     "latest_release": "1.16.221.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.15",
+     "count": 8,
+     "latest": "1.15.0.9",
+     "latest_release": "1.15.0.9",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.14",
+     "count": 32,
+     "latest": "1.14.60.5",
+     "latest_release": "1.14.60.5",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.13",
+     "count": 23,
+     "latest": "1.13.1.5",
+     "latest_release": "1.13.1.5",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.12",
+     "count": 29,
+     "latest": "1.12.1.1",
+     "latest_release": "1.12.1.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.11",
+     "count": 18,
+     "latest": "1.11.4.2",
+     "latest_release": "1.11.4.2",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.10",
+     "count": 8,
+     "latest": "1.10.1",
+     "latest_release": "1.10.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.9",
+     "count": 5,
+     "latest": "1.9.0.15",
+     "latest_release": "1.9.0.15",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.8",
+     "count": 9,
+     "latest": "1.8.1.2",
+     "latest_release": "1.8.1.2",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.7",
+     "count": 9,
+     "latest": "1.7.1",
+     "latest_release": "1.7.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.6",
+     "count": 9,
+     "latest": "1.6.1",
+     "latest_release": "1.6.1",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.5",
+     "count": 13,
+     "latest": "1.5.3",
+     "latest_release": "1.5.3",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.4",
+     "count": 5,
+     "latest": "1.4.2",
+     "latest_release": "1.4.2",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.2",
+     "count": 29,
+     "latest": "1.2.5.13",
+     "latest_release": "1.2.5.13",
+     "sources": [
+      "ganquan",
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.1",
+     "count": 13,
+     "latest": "1.1.5",
+     "latest_release": "1.1.5",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "1.0",
+     "count": 5,
+     "latest": "1.0.4",
+     "latest_release": "1.0.4",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.1601",
+     "count": 1,
+     "latest": "0.1601.0.0",
+     "latest_release": "0.1601.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.1600",
+     "count": 1,
+     "latest": "0.1600.5.0",
+     "latest_release": "0.1600.5.0",
+     "sources": [
+      "mcdl",
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.159",
+     "count": 1,
+     "latest": "0.159.0.0",
+     "latest_release": "0.159.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.158",
+     "count": 1,
+     "latest": "0.158.0.0",
+     "latest_release": "0.158.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.157",
+     "count": 1,
+     "latest": "0.157.1.0",
+     "latest_release": "0.157.1.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.156",
+     "count": 1,
+     "latest": "0.156.0.0",
+     "latest_release": "0.156.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.154",
+     "count": 1,
+     "latest": "0.154.1.0",
+     "latest_release": "0.154.1.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.150",
+     "count": 1,
+     "latest": "0.150.0.0",
+     "latest_release": "0.150.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.142",
+     "count": 1,
+     "latest": "0.142.1.0",
+     "latest_release": "0.142.1.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.141",
+     "count": 1,
+     "latest": "0.141.0.0",
+     "latest_release": "0.141.0.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.140",
+     "count": 1,
+     "latest": "0.140.1.0",
+     "latest_release": "0.140.1.0",
+     "sources": [
+      "nullatom"
+     ]
+    },
+    {
+     "major": "0.132",
+     "count": 1,
+     "latest": "0.132.0.0",
+     "latest_release": "0.132.0.0",
+     "sources": [
+      "mcdl"
+     ]
+    },
+    {
+     "major": "0.16",
+     "count": 3,
+     "latest": "0.16.1",
+     "latest_release": "0.16.1",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.15",
+     "count": 12,
+     "latest": "0.15.10",
+     "latest_release": "0.15.10",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.14",
+     "count": 5,
+     "latest": "0.14.3",
+     "latest_release": "0.14.3",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "nullatom",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.13",
+     "count": 3,
+     "latest": "0.13.2",
+     "latest_release": "0.13.2",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "xiaobu"
+     ]
+    },
+    {
+     "major": "0.12",
+     "count": 3,
+     "latest": "0.12.1.0",
+     "latest_release": "0.12.1.0",
+     "sources": [
+      "mcappx",
+      "mcarc_static",
+      "mcdl",
+      "nullatom",
+      "xiaobu"
+     ]
+    }
+   ]
+  },
+  "stardew": {
+   "name": "星露谷物语 · Android",
+   "count": 98,
+   "directory_count": 0,
+   "latest_release": "1.331",
+   "latest_any": "1.6.15.3",
+   "majors": [
+    {
+     "major": "1.x",
+     "count": 98,
+     "latest": "1.6.15.3",
+     "latest_release": "1.6.15.3",
+     "sources": [
+      "stardew"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": [
+  {
+   "key": "mojang",
+   "name": "Mojang Piston",
+   "homepage": "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json",
+   "ok": true,
+   "error": "",
+   "count": 920,
+   "last_sync": "2026-10-25T00:32:15.231908+00:00"
+  },
+  {
+   "key": "mcdl",
+   "name": "MineBBS · MCDL",
+   "homepage": "https://mc.minebbs.com",
+   "ok": true,
+   "error": "",
+   "count": 580,
+   "last_sync": "2026-10-25T00:32:15.231958+00:00"
+  },
+  {
+   "key": "mcapks",
+   "name": "MCAPKS（苦力怕论坛）",
+   "homepage": "https://mcapks.net",
+   "ok": true,
+   "error": "",
+   "count": 636,
+   "last_sync": "2026-10-25T00:32:15.231967+00:00"
+  },
+  {
+   "key": "mcappx",
+   "name": "MCAPPX",
+   "homepage": "https://www.mcappx.com",
+   "ok": true,
+   "error": "",
+   "count": 590,
+   "last_sync": "2026-10-25T00:32:15.231972+00:00"
+  },
+  {
+   "key": "spectro",
+   "name": "星月 Minecraft 版本库",
+   "homepage": "https://www.spectrollay.com/minecraft_repository",
+   "ok": true,
+   "error": "",
+   "count": 352,
+   "last_sync": "2026-10-25T00:32:15.231986+00:00"
+  },
+  {
+   "key": "mcarc",
+   "name": "MCARC / zihao_il 动态版本库",
+   "homepage": "https://bbk.endyun.ltd/main",
+   "ok": true,
+   "error": "",
+   "count": 680,
+   "last_sync": "2026-10-25T00:32:15.231993+00:00"
+  },
+  {
+   "key": "xiaobu",
+   "name": "小布のMC版本库",
+   "homepage": "https://mcdl.xbu.hk",
+   "ok": true,
+   "error": "",
+   "count": 1241,
+   "last_sync": "2026-10-25T00:32:15.231999+00:00"
+  },
+  {
+   "key": "ganquan",
+   "name": "甘泉版本库",
+   "homepage": "https://mc.mcsc.top/resources/bedrock.php",
+   "ok": true,
+   "error": "",
+   "count": 1094,
+   "last_sync": "2026-10-25T00:32:15.232005+00:00"
+  },
+  {
+   "key": "mcpelife",
+   "name": "MCPELIFE",
+   "homepage": "https://mcpelife.com",
+   "ok": true,
+   "error": "",
+   "count": 634,
+   "last_sync": "2026-10-25T00:32:15.232013+00:00"
+  },
+  {
+   "key": "nullatom",
+   "name": "NullAtom 原子资源",
+   "homepage": "https://res.nullatom.com/Minecraft",
+   "ok": true,
+   "error": "",
+   "count": 649,
+   "last_sync": "2026-10-25T00:32:15.232019+00:00"
+  },
+  {
+   "key": "bmclapi",
+   "name": "BMCLAPI 镜像",
+   "homepage": "https://bmclapi2.bangbang93.com",
+   "ok": true,
+   "error": "",
+   "count": 920,
+   "last_sync": "2026-10-25T00:32:15.232023+00:00"
+  },
+  {
+   "key": "fastmirror",
+   "name": "FastMirror 无极镜像",
+   "homepage": "https://www.fastmirror.net",
+   "ok": true,
+   "error": "",
+   "count": 604,
+   "last_sync": "2026-10-25T00:32:15.232027+00:00"
+  },
+  {
+   "key": "mcarc_static",
+   "name": "MCARC 旧版归档",
+   "homepage": "https://mcarc.github.io",
+   "ok": true,
+   "error": "",
+   "count": 734,
+   "last_sync": "2026-10-25T00:32:15.232032+00:00"
+  },
+  {
+   "key": "stardew",
+   "name": "星露谷版本库",
+   "homepage": "https://stardewvalley.spectrollay.com/repository/",
+   "ok": true,
+   "error": "",
+   "count": 98,
+   "last_sync": "2026-10-25T00:32:15.232036+00:00"
+  }
+ ],
+ "external": [
+  {
+   "key": "mcsc",
+   "name": "甘泉版本库",
+   "homepage": "https://mc.mcsc.top",
+   "note": "API 需合作伙伴令牌，未公开；页面已抓取（/resources/bedrock.php）。"
+  },
+  {
+   "key": "mcversions",
+   "name": "MCVersions",
+   "homepage": "https://mcversions.net",
+   "note": "Java 版本清单外链。"
+  },
+  {
+   "key": "omniarchive",
+   "name": "Omniarchive",
+   "homepage": "https://omniarchive.net",
+   "note": "Java 历史版本归档外链。"
+  }
+ ]
+}

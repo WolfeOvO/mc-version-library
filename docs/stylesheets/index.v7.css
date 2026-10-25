@@ -1,0 +1,145 @@
+/* Slate-grey primary + warm clay accent */
+a { text-decoration: none !important; }
+
+.md-button.mc-button {
+  width: 100%;
+  border-radius: .5rem !important;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.md-button.button-all {
+  width: 32%;
+  margin-top: .5rem;
+  border-radius: 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 575px) {
+  .md-button.button-all { width: 49%; }
+}
+
+/* ------------------------------------------------------------------
+   Theme palette: slate blue-grey primary + warm clay accent
+   main chromatic cluster #6c7681 (hue 211) + warm clay #b0887d
+   header keeps the same family, deepened for white-text contrast (7.4:1)
+   ------------------------------------------------------------------ */
+body[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #4a5764;
+  --md-primary-fg-color--light: #6c7681;
+  --md-primary-fg-color--dark: #39434e;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-accent-fg-color: #96604f;
+  --md-accent-fg-color--transparent: #96604f1a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: #ffffffb3;
+  --md-typeset-a-color: #4a5764;
+}
+
+body[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2b3540;
+  --md-primary-fg-color--light: #55616d;
+  --md-primary-fg-color--dark: #1f272f;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-accent-fg-color: #d3a695;
+  --md-accent-fg-color--transparent: #d3a6951a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: #ffffffb3;
+  --md-typeset-a-color: #b9c6d0;
+}
+
+.md-typeset .info {
+  border-width: 0;
+  border-left-width: 4px;
+}
+
+/* long provider label rows (e.g. MCDL 线路 1..5) must wrap instead of widening the page */
+.md-typeset .tabbed-labels {
+  flex-wrap: wrap;
+}
+
+/* keep Latin glyphs on Roboto like the reference theme, Chinese on the fleet font */
+body,
+input {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Source Han Sans SC VF", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* table download buttons: the grid-chip width (32%) clips the label inside tables */
+.md-typeset table .md-button.button-all {
+  width: auto;
+  min-width: 5rem;
+  text-align: center;
+  justify-content: center;
+  padding: .35em .9em;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+@media only screen and (max-width: 575px) {
+  .md-typeset table .md-button.button-all { width: auto; min-width: 4.6rem; }
+}
+
+/* keep every download button label centred */
+.md-typeset .md-button { text-align: center; justify-content: center; }
+
+/* ------------------------------------------------------------------
+   按钮可读性：Material 的 .md-button 默认拿 --md-primary-fg-color 当文字/边框色，
+   深色方案里那是页眉的深石板色（#2b3540），叠在 #1e2129 页面上几乎看不见。
+   这里显式给两套方案各自的前景/边框/悬停色，保证 ≥4.5:1。
+   ------------------------------------------------------------------ */
+body[data-md-color-scheme="default"] .md-typeset .md-button {
+  color: var(--md-primary-fg-color);
+  border-color: rgba(74, 87, 100, .45);
+  background-color: rgba(74, 87, 100, .04);
+}
+body[data-md-color-scheme="default"] .md-typeset .md-button:focus,
+body[data-md-color-scheme="default"] .md-typeset .md-button:hover {
+  color: #ffffff;
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
+body[data-md-color-scheme="slate"] .md-typeset .md-button {
+  color: #cfdae3;
+  border-color: rgba(207, 218, 227, .5);
+  background-color: rgba(207, 218, 227, .06);
+}
+body[data-md-color-scheme="slate"] .md-typeset .md-button:focus,
+body[data-md-color-scheme="slate"] .md-typeset .md-button:hover {
+  color: #16202a;
+  background-color: #cfdae3;
+  border-color: #cfdae3;
+}
+
+/* ------------------------------------------------------------------
+   下载按钮：图标（twemoji span 里的 svg）默认 vertical-align: baseline，
+   与文字的 line-box 顶部对齐，看起来总是偏高/偏低几个像素。
+   改成 inline-flex + 居中，图标与文字垂直居中对齐。
+   ------------------------------------------------------------------ */
+.md-typeset .md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .35em;
+  line-height: 1.45;
+}
+.md-typeset .md-button .twemoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.15em;
+  width: 1.15em;
+  margin: 0;
+  line-height: 1;
+}
+.md-typeset .md-button .twemoji svg {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  position: static;
+}
+/* 表格里的按钮本来就不换行，flex 后保持内边距不变 */
+.md-typeset table .md-button.button-all { display: inline-flex; }
