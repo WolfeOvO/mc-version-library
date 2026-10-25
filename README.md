@@ -20,7 +20,8 @@
 │   ├── make_sitemap.py       # 构建后生成 sitemap.xml / robots.txt
 │   └── deploy.example.sh     # 通用 rsync 部署示例
 ├── tools/
-│   └── probe_mcdl.py         # MCDL 分页 / 下载渠道解析探针
+│   ├── probe_mcdl.py         # MCDL 分页 / 下载渠道解析探针
+│   └── probe_mcdwei.py       # MCDownload 版本×架构 / 镜像渠道探针
 ├── mkdocs.yml
 └── requirements.txt
 ```
@@ -52,6 +53,7 @@ mkdocs serve
 | Mojang Piston | `piston-meta.mojang.com` + 每版本 JSON | Java 版官方清单，client/server jar 的 sha1 与体积来自官方 |
 | BMCLAPI / 快速镜像 | `bmclapi2.bangbang93.com`、`download.fastmirror.net` | Java 版国内镜像 |
 | MCDL（MineBBS） | `api.mc.minebbs.com/api/v1/versions/` | 基岩版 Android/iOS/Windows；下载链接是加密跳转，见下文 |
+| MCDownload（mcd.wei.qzz.io） | `a.p.z.ruanhor.dpdns.org/mcdownload/...` | 基岩版 Android（2 ABI）与 Windows（x64/x86/arm）；每版本 5–8 个网盘镜像，见下文 |
 | MCAPKS | `mcapks.net` | 基岩版 APK，按 `armeabi-v7a` / `arm64-v8a` 分架构 |
 | MCAPPX | `data.mcappx.com/v2/bedrock.json` | 基岩版 Windows（GDK / UWP） |
 | 星月（Spectrollay） | `spectrollay.com/data/...` | 基岩版目录型资源，单独标 `scope=directory` |
@@ -96,6 +98,8 @@ mkdocs serve
 
 `data/catalog.json` 是站点导航用的汇总（每设备版本数、大版本分布、来源列表）。
 
+当前快照（2026-10-25）：Java 920 · Android 987 · iOS 213 · Windows 953 · 星露谷 98；其中 MCDownload 贡献 11,788 条渠道。
+
 ## MCDL 下载原理（实测）
 
 MCDL / `mc.minebbs.com` 是一个 Vue 3 SPA，页面本身没有文件，全部走接口：
@@ -127,6 +131,20 @@ MCDL / `mc.minebbs.com` 是一个 Vue 3 SPA，页面本身没有文件，全部�
    python3 tools/probe_mcdl.py --pages          # 只抓分页，统计版本/平台/渠道数
    python3 tools/probe_mcdl.py --pages --resolve # 再逐条解析 302 目标（慢，默认 0.9s/条）
    ```
+
+## MCDownload 下载原理（实测）
+
+`mcd.wei.qzz.io`（MCDownload，作者 ruanhor）是聚合站，页面与接口分离：
+
+- API：`https://a.p.z.ruanhor.dpdns.org/mcdownload/...`（前端里的 `apiBase`）
+- 基岩 Android：`GET /mcdownload/download/mcbe/list[?major=1.21]` → `{majors, major, total, versions:[{version,beta,date,size}]}`。
+  **每个 major 只返回该大版本**；34 个 major 里 `26.xx` 折叠成 `26.x`（传 26.60 / 26.50 … 都返回同一份 67 条），去重后 693 个版本；`major=RTX Beta` 直接 `400`
+- Windows：`GET /mcdownload/download/mcpc/list` → 656 个版本，带 `archs`（x64 579 / x86 459 / arm 125）
+- 单版本渠道：`GET .../mcbe/download_link?version=26.52&type=arm64-v8a`（`type` 只接受 `arm64-v8a` / `armeabi-v7a`）或 `GET .../mcpc/download_link?version=26.52&arch=x64` → `data.data.downloads[]`，每项 `{name, url, type}`
+- 渠道是「聚合的聚合」：OneDrive（BBK/MCARC 分享）、UC、123 云盘、夸克、移动云盘（`yun.139.com`）、123盘 appx/exe、Xbox Live 直链、MCAPPX 页面与日/美节点
+- 没有 `type` 的那条「移动云盘-本站解析直链」实际是 **Turnstile 保护的 HTML 页**，不是裸直链，按 `kind=page` 存
+- 实测：Xbox 直链 `200` / `application/octet-stream`（2.07 GB）；MCAPPX 日/美节点对服务器探测返回 **403**（疑似限地区，浏览器可下），已在 note 标注
+- 规模：2622 个 (版本, 架构) 组合，2289 组有渠道；3 并发 + 0.1s 间隔约 12 分钟，链接缓存 3 天
 
 ## 部署
 

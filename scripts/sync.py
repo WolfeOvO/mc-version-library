@@ -34,7 +34,7 @@ CACHE.mkdir(parents=True, exist_ok=True)
 DATA.mkdir(parents=True, exist_ok=True)
 LOG.parent.mkdir(parents=True, exist_ok=True)
 
-ALL_SOURCES = ["mojang", "bmclapi", "fastmirror", "mcdl", "mcapks", "mcappx", "spectro", "mcarc",
+ALL_SOURCES = ["mojang", "bmclapi", "fastmirror", "mcdl", "mcdwei", "mcapks", "mcappx", "spectro", "mcarc",
                "xiaobu", "ganquan", "mcpelife", "nullatom", "mcarc_static", "stardew"]
 
 DEVICES = {
@@ -760,6 +760,134 @@ def sync_mcdl():
     log(f"mcdl: {sum(len(v) for v in store.values())} versions")
     save_mcdl_cache(cache)          # 把猫盘校验结果一并落盘（上一处 save 只存了 redirect 解析）
     return "mcdl", store
+
+
+# ---------------------------------------------------------------- MCDWEI (mcd.wei.qzz.io)
+MCDWEI_API = "https://a.p.z.ruanhor.dpdns.org"
+MCDWEI_CACHE = CACHE / "mcdwei_links.json"
+MCDWEI_TTL = 3 * 86400
+MCDWEI_TYPES = {
+    "onedrive": ("OneDrive", "share"),
+    "uc": ("UC 网盘", "share"),
+    "pan123": ("123云盘", "share"),
+    "pan123-od365": ("123云盘（原 OneDrive_365）", "share"),
+    "pan123-exe": ("123盘（exe）", "share"),
+    "pan123-appx": ("123盘（appx）", "share"),
+    "quark": ("夸克网盘", "share"),
+    "quark-od365": ("夸克网盘（原 OneDrive_365）", "share"),
+    "mobile-cloud": ("移动云盘", "share"),
+    "xbox": ("Xbox Live 直链", "direct"),
+    "mcappx-page": ("MCAPPX 下载页", "page"),
+    "mcappx-jp": ("MCAPPX 日本节点", "direct"),
+    "mcappx-us": ("MCAPPX 美国节点", "direct"),
+}
+MCDWEI_HEADERS = {"Origin": "https://mcd.wei.qzz.io", "Referer": "https://mcd.wei.qzz.io/"}
+# 实测：这两个节点对服务器探测返回 403（疑似限地区），浏览器可正常下载
+MCDWEI_NOTE = {"MCAPPX 日本节点": " · 服务器探测 403", "MCAPPX 美国节点": " · 服务器探测 403"}
+
+
+def parse_size(s):
+    """"745.52MB" -> bytes; None when unknown."""
+    m = re.match(r"^\s*([\d.]+)\s*(TB|GB|MB|KB|B)\s*$", str(s or ""), re.I)
+    if not m:
+        return None
+    mult = {"B": 1, "KB": 1024, "MB": 1024 ** 2, "GB": 1024 ** 3, "TB": 1024 ** 4}[m.group(2).upper()]
+    return int(float(m.group(1)) * mult)
+
+
+def load_mcdwei_cache():
+    if MCDWEI_CACHE.exists():
+        try:
+            return json.loads(MCDWEI_CACHE.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def sync_mcdwei():
+    """mcd.wei.qzz.io (MCDownload): mcbe = Android (2 ABIs), mcpc = Windows (x64/x86/arm).
+
+    Each (version, arch) returns 5-8 mirrors. Note: the entry named "移动云盘-本站解析直链"
+    carries no type and is a Turnstile-guarded HTML page, not a raw file URL -> kind=page.
+    """
+    log("mcdwei: lists")
+    base = MCDWEI_API + "/mcdownload"
+    be = http_json(base + "/download/mcbe/list", cache_key="mcdwei/mcbe.json",
+                   max_age=6 * 3600, headers=MCDWEI_HEADERS)
+    majors = (be.get("data") or {}).get("majors") or []
+    be_versions = {}
+    for m in majors:
+        try:
+            j = http_json(base + "/download/mcbe/list?major=" + quote(str(m)),
+                          cache_key=f"mcdwei/mcbe-{m}.json", max_age=6 * 3600, headers=MCDWEI_HEADERS)
+        except Exception:      # "RTX Beta" and friends answer 400
+            continue
+        for v in (j.get("data") or {}).get("versions") or []:
+            if v.get("version"):
+                be_versions.setdefault(v["version"], v)
+    pc = http_json(base + "/download/mcpc/list", cache_key="mcdwei/mcpc.json",
+                   max_age=6 * 3600, headers=MCDWEI_HEADERS)
+    pc_versions = {v["version"]: v for v in ((pc.get("data") or {}).get("versions") or []) if v.get("version")}
+    log(f"mcdwei: mcbe {len(be_versions)} versions / mcpc {len(pc_versions)} versions")
+
+    jobs = [("mcbe", v, a) for v in be_versions for a in ("arm64-v8a", "armeabi-v7a")]
+    jobs += [("mcpc", v, a) for v, meta in pc_versions.items() for a in (meta.get("archs") or ["x64"])]
+
+    cache = load_mcdwei_cache()
+    todo = [j for j in jobs
+            if not (isinstance(cache.get("|".join(j)), dict)
+                    and time.time() - cache["|".join(j)].get("ts", 0) < MCDWEI_TTL)]
+    log(f"mcdwei: {len(jobs)} version/arch, {len(jobs) - len(todo)} cached, {len(todo)} to fetch")
+    lock = threading.Lock()
+
+    def one(job):
+        kind, ver, arch = job
+        path = (f"/download/mcbe/download_link?version={quote(ver)}&type={arch}" if kind == "mcbe"
+                else f"/download/mcpc/download_link?version={quote(ver)}&arch={arch}")
+        time.sleep(0.1)
+        dl = []
+        try:
+            j = http_json(base + path, headers=MCDWEI_HEADERS, timeout=30, retries=3)
+            dl = ((j.get("data") or {}).get("data") or {}).get("downloads") or []
+        except Exception:
+            pass
+        with lock:
+            cache["|".join(job)] = {"ts": int(time.time()), "downloads": dl}
+
+    if todo:
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            list(ex.map(one, todo))
+        MCDWEI_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+
+    store = {"android": {}, "windows": {}}
+
+    def build(kind, versions, dev):
+        for ver, meta in versions.items():
+            archs = ["arm64-v8a", "armeabi-v7a"] if kind == "mcbe" else (meta.get("archs") or ["x64"])
+            for arch in archs:
+                dl = (cache.get(f"{kind}|{ver}|{arch}") or {}).get("downloads") or []
+                if not dl:
+                    continue
+                ch = "beta" if meta.get("beta") else "release"
+                rec = merge_version(store[dev], dev, norm_ver(ver), ch, meta.get("date") or "",
+                                    "mcdwei", meta={"raw": ver, "beta": bool(meta.get("beta"))})
+                size = parse_size(meta.get("size"))
+                for x in dl:
+                    url = (x.get("url") or "").strip()
+                    if not url:
+                        continue
+                    provider, kind2 = MCDWEI_TYPES.get(x.get("type") or "",
+                                                       ("移动云盘 · 本站解析页", "page"))
+                    if provider == "OneDrive" and "365" in (x.get("name") or ""):
+                        provider = "OneDrive_365"
+                    add_offer(rec, offer("mcdwei", provider, url, kind=kind2, arch=arch,
+                                         size=size, scope="file",
+                                         note="MCDownload 渠道" + MCDWEI_NOTE.get(provider, "")))
+
+    build("mcbe", be_versions, "android")
+    build("mcpc", pc_versions, "windows")
+    log(f"mcdwei: {sum(len(v) for v in store.values())} versions")
+    return "mcdwei", store
 
 
 # ---------------------------------------------------------------- MCAPKS
@@ -2143,9 +2271,9 @@ def main():
                 for d, arr in res[1].items():
                     dirs_extra[d].extend(arr)
                 stats["source_status"][name] = {"ok": True, "items": sum(len(v) for v in res[1].values())}
-            elif name == "mcdl":
+            elif name in ("mcdl", "mcdwei"):
                 src, per_dev = res
-                for dev in ("android", "ios", "windows"):
+                for dev in per_dev:
                     stores[dev].update({f"{name}:{k}": v for k, v in per_dev.get(dev, {}).items()})
                 stats["source_status"][name] = {"ok": True,
                                                 "items": sum(len(v) for v in per_dev.values())}
@@ -2197,6 +2325,8 @@ def main():
                 stats["source_status"]["fastmirror"] = {"ok": False, "error": str(e)[:300]}
     if only in ("all", "mcdl"):
         run("mcdl", sync_mcdl)
+    if only in ("all", "mcdwei"):
+        run("mcdwei", sync_mcdwei)
     if only in ("all", "mcapks"):
         run("mcapks", lambda: sync_mcapks(args.limit), "android")
     if only in ("all", "mcappx"):
@@ -2294,6 +2424,7 @@ def main():
     SOURCES = [
         ("mojang", "Mojang Piston", "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json"),
         ("mcdl", "MineBBS · MCDL", "https://mc.minebbs.com"),
+        ("mcdwei", "MCDownload（mcd.wei.qzz.io）", "https://mcd.wei.qzz.io"),
         ("mcapks", "MCAPKS（苦力怕论坛）", "https://mcapks.net"),
         ("mcappx", "MCAPPX", "https://www.mcappx.com"),
         ("spectro", "星月 Minecraft 版本库", "https://www.spectrollay.com/minecraft_repository"),
