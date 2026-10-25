@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25T00:32:15.232046+00:00",
- "duration_s": 911.9,
+ "generated": "2026-10-25T05:02:25.626477+00:00",
+ "duration_s": 1669.0,
  "devices": {
   "java": {
    "name": "Minecraft Java 版",
@@ -410,8 +410,8 @@
     {
      "major": "1.15",
      "count": 5,
-     "latest": "1.15.0.56",
-     "latest_release": "1.15.0.56",
+     "latest": "1.15.0.51",
+     "latest_release": "1.15.0.51",
      "sources": [
       "ganquan",
       "mcapks",
@@ -458,8 +458,8 @@
     {
      "major": "1.12",
      "count": 15,
-     "latest": "1.12.1.1",
-     "latest_release": "1.12.1.1",
+     "latest": "1.12.0.14",
+     "latest_release": "1.12.0.14",
      "sources": [
       "ganquan",
       "mcapks",
@@ -491,8 +491,8 @@
     {
      "major": "1.10",
      "count": 4,
-     "latest": "1.10.0.7",
-     "latest_release": "1.10.0.7",
+     "latest": "1.10.0.4",
+     "latest_release": "1.10.0.4",
      "sources": [
       "ganquan",
       "mcapks",
@@ -508,8 +508,8 @@
     {
      "major": "1.9",
      "count": 6,
-     "latest": "1.9.0.15",
-     "latest_release": "1.9.0.15",
+     "latest": "1.9.0.5",
+     "latest_release": "1.9.0.5",
      "sources": [
       "ganquan",
       "mcapks",
@@ -541,8 +541,8 @@
     {
      "major": "1.7",
      "count": 8,
-     "latest": "1.7.0.13",
-     "latest_release": "1.7.0.13",
+     "latest": "1.7.0.9",
+     "latest_release": "1.7.0.9",
      "sources": [
       "ganquan",
       "mcapks",
@@ -558,8 +558,8 @@
     {
      "major": "1.6",
      "count": 9,
-     "latest": "1.6.1.0",
-     "latest_release": "1.6.1.0",
+     "latest": "1.6.0.30",
+     "latest_release": "1.6.0.30",
      "sources": [
       "ganquan",
       "mcapks",
@@ -575,8 +575,8 @@
     {
      "major": "1.5",
      "count": 12,
-     "latest": "1.5.3.0",
-     "latest_release": "1.5.3.0",
+     "latest": "1.5.2.1",
+     "latest_release": "1.5.2.1",
      "sources": [
       "ganquan",
       "mcapks",
@@ -694,8 +694,8 @@
     {
      "major": "0.14",
      "count": 19,
-     "latest": "0.14.3",
-     "latest_release": "0.14.3",
+     "latest": "0.14.2",
+     "latest_release": "0.14.2",
      "sources": [
       "mcapks",
       "mcarc",
@@ -774,8 +774,8 @@
     {
      "major": "0.8",
      "count": 2,
-     "latest": "0.8.1",
-     "latest_release": "0.8.1",
+     "latest": "0.8.0",
+     "latest_release": "0.8.0",
      "sources": [
       "mcapks",
       "mcdl",
@@ -1287,7 +1287,7 @@
   },
   "windows": {
    "name": "Minecraft 基岩版 · Windows",
-   "count": 952,
+   "count": 953,
    "directory_count": 26,
    "latest_release": "26.52.3",
    "latest_any": "26.70.21",
@@ -1306,7 +1306,7 @@
     },
     {
      "major": "1.21",
-     "count": 179,
+     "count": 180,
      "latest": "1.21.132.1",
      "latest_release": "1.21.132.1",
      "sources": [
@@ -1561,8 +1561,8 @@
     {
      "major": "1.1",
      "count": 13,
-     "latest": "1.1.5",
-     "latest_release": "1.1.5",
+     "latest": "1.1.5.1",
+     "latest_release": "1.1.5.1",
      "sources": [
       "mcappx",
       "mcarc_static",
@@ -1788,8 +1788,8 @@
    "homepage": "https://mc.minebbs.com",
    "ok": true,
    "error": "",
-   "count": 580,
-   "last_sync": "2026-10-25T00:32:15.231958+00:00"
+   "count": 581,
+   "last_sync": "2026-10-25T05:02:25.626386+00:00"
   },
   {
    "key": "mcapks",
